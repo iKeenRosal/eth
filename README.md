@@ -11,14 +11,16 @@ Thought Process
 <li>I used POST on forms because I didn't want regular users to see what are the parameters being passed onto the server (unlike if GET method was used)</li>
 </ul>
 
+<hr/>
+
 <h1>
 Installation
 </h1>
 <h3>Code</h3>
 <ul>
-<li>Open a terminal/ssh and clone optons:
-<br/> SSH option: "git clone git@github.com:katzrosal/ztak_eth.git"
-<br/> HTTPS option: "git clone https://github.com/katzrosal/ztak_eth.git"
+<li>Open a terminal/ssh and clone options:
+<br/>SSH option: "git clone git@github.com:katzrosal/ztak_eth.git"
+<br/>HTTPS option: "git clone https://github.com/katzrosal/ztak_eth.git"
 </li>
 </ul>
 <h3>Database</h3>
@@ -35,11 +37,13 @@ Adjust the database information that is currently on "ztak_eth/includes/Database
 <h3>VirtualHost</h3>
 <ul>
 <li>Assure that virtual host for this test is present and pointed to the newly created directory</li>
-<li>Assure to capture both :80 and :443</li>
+<li>Assure to capture both :80 (http) and :443 (https)</li>
 </ul>
+
 <hr/>
 
-If I am given more time for the projects, below are my thoughts.
+<br/>
+<i style="color:red;">If I am given more time to work on this projects, below are my thoughts.</i>
 
 <h1>
 General Improvements
@@ -68,7 +72,7 @@ Database Improvement
 Create a table with a list of publisher information and reference the primary id as a foreign key within Games table
 </li>
 <li>
-Alter Games table so that it has column for user_id (the user who inputted the game if applicable), publisher_id (foreign key from Publisher table), created date, modified date, status (if active or inactive), image_id (if the game has a image representation), description.. This table can totally change as requirements become more detailed. There can even be more supporting tables that can be created the this can scale fairly large.  
+Alter Games table so that it has column for user_id (the user who inputted the game if applicable), publisher_id (foreign key from Publisher table), created date, modified date, status (if active or inactive), image_id (if the game has a image representation), description.. This table can totally change as requirements become more detailed. There can even be more supporting tables that can be created the this can scale fairly large. Games can also have a category which will add another table "Category"  
 </li>
 <li>
 Create a table with a list of image information and use its primary key on the Games table
@@ -90,11 +94,11 @@ Programming/Design Improvement
 
 <h2>Search/Display Page</h2>
 <ul>
-<li>Clarify if the search is mainly searching the Game names or also the Publisher's name; adjust schema according to this. So far, I am searching for keywords on both Publisher and Name</li>
+<li>Clarify if "search" is mainly searching the Game's name or also the Publisher's name; adjust schema according to this. So far, I am searching for keywords on both Publisher and Name</li>
 <li>Allow an alternating color per row so that it's easier on the eyes</li>
 <li>Since the entries were lowered case into the database, consider UCWORDS() function to capitalize the first letter per string when displaying the Publisher and Name of the game</li>
 <li>Might consider converting the Table to DIVs for flexibility of how the result is shown</li>
-<li>Search can work dynamically and simultaneously so that as adequate keywords are entered, the list gets populated simultaneously (but this might be too much)</li>
+<li>Search can work dynamically and simultaneously so that as adequate keywords are entered, the list gets populated simultaneously (but this might be too fancy for an ordinary game search)</li>
 </ul>
 <h2>Create/Edit Page</h2>
 <ul>
