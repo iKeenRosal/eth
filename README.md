@@ -4,11 +4,22 @@ Thought Process
 <ul>
 <li>Files were placed within their according directories for ease of reference</li>
 <li>I decided to use Classes for Games and Database connection so that the code is encapsulated accordingly, clean, reuseable, and scalable </li>
-<li>Within the GamesClass, I follow the basic CRUD philosophy that allows create, read, update, and delete of data as basic features. Additional functionalities have been added according to what's necessary</li>
+<li>Within the GamesClass, I follow the basic CRUD philosophy that includes create, read, update, and delete of data as basic features. Additional functionalities have been added according to what's necessary</li>
 <li>As for validation, I chose server-side validation because it is more secure. Perhaps in the future, a cliet-side validation can also be implemented prior server-side validation to improve user experience</li>
 <li>As for views (search, create, edit), I placed them on separate files to minimize corruption of other working features when working on a specific feature - this can speed up debugging</li>
-<li>I am uncertain what are the requirements for search and so I searched for keywords if it partially exists in either 'publisher' or 'name' column within the Games Table</li>
+<li>I am uncertain what are the requirements for search and so I searched for keywords if it partially exists in either 'publisher' or 'name' column within the Games Table> Now thinking about it, I could have searched the 'nickname' column as well.</li>
 <li>I used POST on forms because I didn't want regular users to see what are the parameters being passed onto the server (unlike if GET method was used)</li>
+<li>The front page is yet to be designed accordingly
+<br/>
+<ul>
+    <li>Front page to only show "Search" upon first load</li>
+    <li>When search button was clicked, submit the data to be analyzed and fetched from the database and display in a table. In the future, it will be nice if this can be a DIV allow flexibility</li>
+    <li>I want to separate the search, create, and edit into 3 different template files</li>
+    <li>I intend to use js/jquery to process the blob message that pops up when an action (search, create, edit) was performed so that the user know if it was a success or if an error occur</li>
+</ul>
+</li>
+<li>Some Class Methods need to be refactored so that the codes are not duplicated</li>
+<li>Improve validation and make dynamic and belong to its own class</li>
 </ul>
 
 <hr/>
@@ -19,8 +30,8 @@ Installation
 <h3>Code</h3>
 <ul>
 <li>Open a terminal/ssh and clone options:
-<br/>SSH option: "git clone git@github.com:katzrosal/ztak_eth.git"
-<br/>HTTPS option: "git clone https://github.com/katzrosal/ztak_eth.git"
+<br/>SSH option: "git clone git@github.com:katzrosal/eth.git"
+<br/>HTTPS option: "git clone https://github.com/katzrosal/eth.git"
 </li>
 </ul>
 <h3>Database</h3>
@@ -97,7 +108,7 @@ Programming/Design Improvement
 <li>Clarify if "search" is mainly searching the Game's name or also the Publisher's name; adjust schema according to this. So far, I am searching for keywords on both Publisher and Name</li>
 <li>Allow an alternating color per row so that it's easier on the eyes</li>
 <li>Since the entries were lowered case into the database, consider UCWORDS() function to capitalize the first letter per string when displaying the Publisher and Name of the game</li>
-<li>Might consider converting the Table to DIVs for flexibility of how the result is shown</li>
+<li>Might consider converting the Table to DIVs for flexibility of how the result is shown. In the future if a games has in image, it can be displayed more pleasingly (and remember to CDN this image to lift off weights from the site)</li>
 <li>Search can work dynamically and simultaneously so that as adequate keywords are entered, the list gets populated simultaneously (but this might be too fancy for an ordinary game search)</li>
 </ul>
 <h2>Create/Edit Page</h2>
