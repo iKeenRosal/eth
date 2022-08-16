@@ -81,6 +81,9 @@ Database Improvement
 
 <ul>
 <li>
+Store the database credentials AWAY from the source code or git. BUT for this example, it's okay (maybe..)
+</li>
+<li>
 Create a table with a list of publisher information and reference the primary id as a foreign key within Games table
 </li>
 <li>
