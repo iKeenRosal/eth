@@ -9,6 +9,7 @@ Thought Process
 <li>As for views (search, create, edit), I placed them on separate files to minimize corruption of other working features when working on a specific feature - this can speed up debugging</li>
 <li>I am uncertain what are the requirements for search and so I searched for keywords if it partially exists in either 'publisher' or 'name' column within the Games Table> Now thinking about it, I could have searched the 'nickname' column as well.</li>
 <li>I used POST on forms because I didn't want regular users to see what are the parameters being passed onto the server (unlike if GET method was used)</li>
+<li>I tackled the backend first (building mysql, database class, game class) and then front end last</li>
 <li>The front page is yet to be designed accordingly
 <br/>
 <ul>
